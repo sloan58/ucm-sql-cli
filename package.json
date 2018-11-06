@@ -1,0 +1,42 @@
+{
+  "name": "ucm-sql-cli",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cli-table": "^0.3.1",
+    "command-line-args": "^5.0.2",
+    "command-line-usage": "^5.0.5",
+    "configstore": "^4.0.0",
+    "csv-stringify": "^4.3.1",
+    "dateformat": "^3.0.3",
+    "figlet": "^1.2.1",
+    "inquirer": "^6.2.0",
+    "lodash": "^4.17.11",
+    "shelljs": "^0.8.2",
+    "strong-soap": "^1.14.0"
+  },
+  "description": "A node.js package to query the Cisco UCM database from the CLI",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sloan58/ucm-sql-cli.git"
+  },
+  "keywords": [
+    "Cisco",
+    "UCM",
+    "AXL",
+    "SQL",
+    "CLI",
+    "node.js"
+  ],
+  "author": "Marty Sloan <masloan@cisco.com>",
+  "bugs": {
+    "url": "https://github.com/sloan58/ucm-sql-cli/issues"
+  },
+  "homepage": "https://github.com/sloan58/ucm-sql-cli#readme"
+}
