@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+const clear = require('clear')
 const chalk = require("chalk")
 const figlet = require("figlet");
 
@@ -53,6 +56,7 @@ const run = async() => {
     })
 }
 
+clear()
 if (!Object.keys(options).length) {
     run();
 } else if (options.help) {
