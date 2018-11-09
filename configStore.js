@@ -1,26 +1,30 @@
 const Configstore = require('configstore');
-const pkg = require('../package.json');
+const pkg = require('./package.json');
 const conf = new Configstore(pkg.name);
 const _ = require('lodash')
 
 module.exports = {
-    load: () => {
+    loadUcms: () => {
         if (!conf.get('ucm')) {
             conf.set('ucm', [])
         }
         return conf.get('ucm')
     },
 
-    add: (ucm) => {
+    addUcm: (ucm) => {
         let ucms = conf.get('ucm')
         ucm = {'id': ucms.length + 1, ...ucm}
         ucms.push(ucm)
         conf.set('ucm', ucms)
     },
 
-    remove: (ucmName) => {
+    removeUcm: (ucmName) => {
         let ucms = conf.get('ucm')
         _.remove(ucms, ucm => ucm.name === ucmName)
         conf.set('ucm', ucms)
+    },
+
+    addTeamSpace: (spaceName) => {
+        
     }
 }

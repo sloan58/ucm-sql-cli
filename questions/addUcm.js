@@ -37,7 +37,7 @@ module.exports = () => {
         }, {
             type: "confirm",
             name: "CONFIRMED",
-            message: "Add UCM?",
+            message: "Add UCM now?",
             default: false
         }
     ];

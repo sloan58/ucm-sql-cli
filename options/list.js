@@ -2,8 +2,8 @@ const chalk = require("chalk")
 const figlet = require("figlet");
 const Table = require('cli-table');
 
-const ucmConfigStore = require('../ucm/ucmConfigStore')
-const ucms = ucmConfigStore.load()
+const configStore = require('../configStore')
+const ucms = configStore.loadUcms()
 
 const init = () => {
     console.log(chalk.green(figlet.textSync("List UCM", {

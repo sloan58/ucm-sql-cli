@@ -16,8 +16,8 @@ const gatherQueryInfo = require('./questions/gatherQueryInfo')
 const optionDefinitions = require('./options/optionsList')
 const options = commandLineArgs(optionDefinitions)
 
-const ucmConfigStore = require('./ucm/ucmConfigStore')
-const ucms = ucmConfigStore.load()
+const configStore = require('./configStore')
+const ucms = configStore.loadUcms()
 
 now = new Date()
 
@@ -67,4 +67,6 @@ if (!Object.keys(options).length) {
     list()
 } else if (options.remove) {
     remove()
+} else if (options.teams) {
+    teams()
 }

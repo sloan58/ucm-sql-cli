@@ -1,6 +1,6 @@
 const inquirer = require("inquirer")
 
-let choices = require('../ucm/ucmConfigStore').load()
+let choices = require('../configStore').loadUcms()
 
 module.exports = () => {
     const questions = [
@@ -12,7 +12,7 @@ module.exports = () => {
         }, {
             type: "confirm",
             name: "CONFIRMED",
-            message: "Ready to roll?",
+            message: "Remove UCM now?",
             default: false
         }
     ];

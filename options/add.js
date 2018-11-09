@@ -2,7 +2,7 @@ const chalk = require("chalk")
 const figlet = require("figlet");
 const gatherUcm = require('../questions/addUcm')
 
-const ucmConfigStore = require('../ucm/ucmConfigStore')
+const configStore = require('../configStore')
 
 const init = () => {
     console.log(chalk.green(figlet.textSync("Add UCM", {
@@ -31,7 +31,7 @@ const run = async() => {
         schema: SCHEMA
     }
 
-    ucmConfigStore.add(newUcm)
+    configStore.addUcm(newUcm)
     console.log(`\n${chalk.green('New UCM Added!')}`);
 }
 

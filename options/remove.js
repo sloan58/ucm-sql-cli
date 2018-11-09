@@ -2,7 +2,7 @@ const chalk = require("chalk")
 const figlet = require("figlet");
 const removeUcm = require('../questions/removeUcm')
 
-const ucmConfigStore = require('../ucm/ucmConfigStore')
+const configStore = require('../configStore')
 
 const init = () => {
     console.log(chalk.green(figlet.textSync("Remove UCM", {
@@ -23,7 +23,7 @@ const run = async() => {
         process.exit()
     }
     
-    ucmConfigStore.remove(CLUSTER)
+    configStore.removeUcm(CLUSTER)
     console.log(`\n${chalk.green('UCM Removed!')}`);
 }
 

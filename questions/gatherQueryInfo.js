@@ -1,7 +1,7 @@
 const inquirer = require("inquirer")
 const chalk = require("chalk")
 
-let choices = require('../ucm/ucmConfigStore').load()
+let choices = require('../configStore').loadUcms()
 
 module.exports = () => {
 
@@ -27,7 +27,7 @@ module.exports = () => {
         }, {
             type: "confirm",
             name: "CONFIRMED",
-            message: "Ready to roll?",
+            message: "Send query now?",
             default: false
         }
     ];
