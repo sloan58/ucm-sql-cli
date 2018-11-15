@@ -22,9 +22,5 @@ module.exports = {
         let ucms = conf.get('ucm')
         _.remove(ucms, ucm => ucm.name === ucmName)
         conf.set('ucm', ucms)
-    },
-
-    addTeamSpace: (spaceName) => {
-        
     }
 }
